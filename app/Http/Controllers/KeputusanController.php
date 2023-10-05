@@ -82,6 +82,25 @@ class KeputusanController extends Controller
         //
     }
 
+    public function cetak_saw(){
+         // Membuat koleksi dari array
+         $collection = collect(KeputusanController::ambilKeputusan());
+         $calon = Jemaat::all();
+
+         // Mengurutkan koleksi berdasarkan properti "rank" dari tertinggi ke terendah
+         $sorted = $collection->sortByDesc('totalSkor');
+ 
+         // Mengambil 2 data tertinggi
+         $datas = $sorted->all();
+ 
+ 
+         return view('cetak-formula-saw',[
+             "page_title"=>"Cetak Formula SAW",
+             "page_description"=>"Hasil Keputusan Penerima Diakonia GPdI Parakletos Purwokerto",
+             "calon"=> $calon,
+             "datas" => $datas
+         ]);
+    }
     public function ambilKeputusan()
     {
         //50% Pendapatan

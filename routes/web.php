@@ -44,6 +44,8 @@ Route::get('/keputusan', [KeputusanController::class,'index'])->middleware('auth
 Route::get('/sign-in',[LoginController::class,'index'])->middleware('guest')->name('sign_in');
 Route::post('/sign-in',[LoginController::class,'authenticate'])->name('sign_in_process');
 
+Route::get('/cetak-formula-saw',[KeputusanController::class,'cetak_saw'])->middleware('auth')->name('cetak.saw');
+
 
 // Route::get('/login', function () {
 //     return view('auth.login');

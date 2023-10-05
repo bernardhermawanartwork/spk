@@ -34,7 +34,7 @@ class JemaatController extends Controller
      */
     public function store(StoreJemaatRequest $request)
     {
-        
+        $request['kehadiran'] = 0;
         $data = $request->all();
         Jemaat::create($data);
         return redirect('/jemaat')->with('message','Jemaat baru telah ditambahkan');

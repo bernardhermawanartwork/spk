@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             'password'=> bcrypt('admin')
         ]);
 
-        Jemaat::factory(200)->create();
+        Jemaat::factory(10)->create();
 
         $dataKehadiran = [
             [
@@ -48,6 +48,42 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 "jemaat_id" => "6",
+                "jumlah_kehadiran" => "30",
+            ],
+            [
+                "jemaat_id" => "7",
+                "jumlah_kehadiran" => "30",
+            ],
+            [
+                "jemaat_id" => "8",
+                "jumlah_kehadiran" => "30",
+            ],
+            [
+                "jemaat_id" => "9",
+                "jumlah_kehadiran" => "30",
+            ],
+            [
+                "jemaat_id" => "10",
+                "jumlah_kehadiran" => "30",
+            ],
+            [
+                "jemaat_id" => "11",
+                "jumlah_kehadiran" => "30",
+            ],
+            [
+                "jemaat_id" => "12",
+                "jumlah_kehadiran" => "30",
+            ],
+            [
+                "jemaat_id" => "13",
+                "jumlah_kehadiran" => "30",
+            ],
+            [
+                "jemaat_id" => "14",
+                "jumlah_kehadiran" => "30",
+            ],
+            [
+                "jemaat_id" => "15",
                 "jumlah_kehadiran" => "30",
             ],
 
