@@ -1,0 +1,9 @@
+/* Your Custom CSS Goes here */
+.custom-table{
+    list-style:none !important;
+    margin:0;
+}
+.custom-table li{
+    list-style:none !important;
+    display: inline !important;
+}
